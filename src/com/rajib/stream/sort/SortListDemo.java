@@ -22,6 +22,10 @@ public class SortListDemo {
         System.out.println("\n>>>> Ascending Employee Salary <<<<");
         employeeList.stream().sorted((emp1, emp2) -> (int) (emp1.getEmpSal() - emp2.getEmpSal())).forEach(System.out::println);
 
+        // Stream and Lambda - Descending Employee Salary
+        System.out.println("\n>>>> Descending Employee Salary <<<<");
+        employeeList.stream().sorted((emp2, emp1) -> (int) (emp1.getEmpSal() - emp2.getEmpSal())).forEach(System.out::println);
+
         // Stream, Lambda and Comparator.comparing() - Ascending Employee Name
         System.out.println("\n>>>> Ascending Employee Name <<<<");
         employeeList.stream().sorted(Comparator.comparing(emp -> emp.getEmpName())).forEach(System.out::println);
